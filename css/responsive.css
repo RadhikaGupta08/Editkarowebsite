@@ -1,0 +1,294 @@
+/* =====================================================
+   EDITKARO RESPONSIVE CSS
+===================================================== */
+
+/* ================= LARGE TABLETS ================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding: 20px 5%;
+  }
+
+  section {
+    padding: 80px 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 55px;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonial-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ================= TABLETS ================= */
+
+@media (max-width: 850px) {
+  .nav-links {
+    position: fixed;
+
+    top: 80px;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: calc(100vh - 80px);
+
+    background: #050816;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    transition: 0.4s;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+
+    color: white;
+  }
+
+  .nav-actions .nav-btn {
+    display: none;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .hero-text {
+    margin: auto;
+  }
+
+  .hero-text h1 {
+    font-size: 45px;
+  }
+
+  .hero-text h2 {
+    font-size: 25px;
+  }
+
+  .hero-text p {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .hero-social {
+    display: none;
+  }
+
+  .about-preview {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .about-image img {
+    height: 400px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-box {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  #newsletter-form {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  section {
+    padding: 60px 5%;
+  }
+
+  .logo a {
+    font-size: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text h2 {
+    font-size: 20px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .hero-badge {
+    font-size: 13px;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .stat-box {
+    width: 140px;
+
+    padding: 15px;
+  }
+
+  .stat-box h3 {
+    font-size: 28px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 32px;
+  }
+
+  .about-image img {
+    height: 300px;
+  }
+
+  .process-container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card {
+    height: 300px;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter-box {
+    padding: 30px;
+  }
+
+  .newsletter-box h2 {
+    font-size: 28px;
+  }
+
+  #newsletter-form {
+    flex-direction: column;
+  }
+
+  #newsletter-form input {
+    width: 100%;
+  }
+
+  .contact-cta h2 {
+    font-size: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer-social div {
+    justify-content: center;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    padding: 12px 25px;
+  }
+
+  .stat-box {
+    width: 120px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}

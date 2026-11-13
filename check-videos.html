@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Video Check | Editkaro</title>
+<style>
+  body{font-family:system-ui,sans-serif;background:#0b0b0c;color:#f4f4f2;margin:0;padding:32px;max-width:860px;margin-inline:auto}
+  h1{font-size:26px;margin:0 0 6px}
+  p{color:#a6a6ab;line-height:1.6}
+  table{width:100%;border-collapse:collapse;margin-top:20px}
+  td,th{padding:12px 10px;border-bottom:1px solid #26262a;text-align:left;font-size:15px;vertical-align:top}
+  .ok{color:#3ddc84;font-weight:600}
+  .bad{color:#ff6b57;font-weight:600}
+  .wait{color:#a6a6ab}
+  code{background:#1b1b1e;padding:2px 6px;border-radius:5px}
+  video{width:140px;border-radius:6px;background:#000}
+  small{color:#8a8a90;display:block;margin-top:4px;line-height:1.5}
+</style>
+</head>
+<body>
+<h1>Video Check</h1>
+<p>Ye page batata hai ki <code>assets/videos/</code> ki kaun si video chal rahi hai aur kaun si nahi.
+Ye sirf tumhare liye hai, site ke menu me iska link nahi hai.</p>
+
+<table id="rows">
+  <tr><th>File</th><th>Status</th><th>Preview</th></tr>
+</table>
+
+<script>
+var files = [
+  ["hero.mp4","Home page background"],
+  ["short-reels.mp4","Short Form Reels"],
+  ["long-form.mp4","Long Form Content"],
+  ["gaming.mp4","Gaming Videos"],
+  ["football.mp4","Football Edits"],
+  ["ecommerce-ad.mp4","eCommerce Ads"],
+  ["documentary.mp4","Documentary Style"],
+  ["color-grading.mp4","Color Grading"],
+  ["anime.mp4","Anime Videos"]
+];
+
+var table = document.getElementById("rows");
+
+files.forEach(function (f) {
+
+  var tr = document.createElement("tr");
+  var status = document.createElement("td");
+  var preview = document.createElement("td");
+  var name = document.createElement("td");
+
+  name.innerHTML = "<code>assets/videos/" + f[0] + "</code><small>" + f[1] + "</small>";
+  status.innerHTML = '<span class="wait">Checking...</span>';
+
+  var v = document.createElement("video");
+  v.muted = true; v.controls = true; v.preload = "metadata"; v.playsInline = true;
+  v.src = "assets/videos/" + f[0];
+
+  v.addEventListener("loadedmetadata", function () {
+    status.innerHTML = '<span class="ok">OK, chal rahi hai</span><small>' +
+      v.videoWidth + "x" + v.videoHeight + ", " + Math.round(v.duration) + " sec</small>";
+  });
+
+  v.addEventListener("error", function () {
+    status.innerHTML = '<span class="bad">Load nahi hui</span><small>' +
+      "1) File is folder me hai? Naam bilkul <b>" + f[0] + "</b> hai? (<b>.mp4.mp4</b> to nahi?)<br>" +
+      "2) Hai to format dikkat hai: HandBrake me H.264 (x264) me convert karo.</small>";
+  });
+
+  preview.appendChild(v);
+  tr.appendChild(name); tr.appendChild(status); tr.appendChild(preview);
+  table.appendChild(tr);
+
+});
+</script>
+</body>
+</html>

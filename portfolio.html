@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<!-- Editkaro website v4 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editkaro | Portfolio</title>
+    <meta
+      name="description"
+      content="Explore Editkaro video editing portfolio including reels, ads, gaming videos and documentaries."
+    />
+    <meta name="author" content="Editkaro" />
+    <meta name="theme-color" content="#0d1117" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Editkaro | Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore Editkaro video editing portfolio including reels, ads, gaming videos and documentaries."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Editkaro | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Explore Editkaro video editing portfolio including reels, ads, gaming videos and documentaries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css?v=4" />
+    <link rel="stylesheet" href="css/responsive.css?v=4" />
+    <link rel="stylesheet" href="css/animations.css?v=4" />
+    <link rel="stylesheet" href="css/theme.css?v=4" />
+
+    <!-- Theme pehle apply hota hai taaki page flash na kare -->
+    <script src="js/darkmode.js?v=4"></script>
+    <noscript
+      ><style>
+        #loader {
+          display: none !important;
+        }
+        [data-aos] {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div id="scroll-progress"></div>
+    <header>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="index.html">Edit<span>Karo</span></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li>
+            <a href="portfolio.html" class="active" aria-current="page"
+              >Portfolio</a
+            >
+          </li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            id="dark-toggle"
+            type="button"
+            aria-label="Switch to light mode"
+          >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <a href="contact.html" class="nav-btn">Let's Talk</a>
+        </div>
+        <button
+          class="menu-icon"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    <main id="main">
+      <!-- PAGE HERO -->
+
+      <section class="page-hero">
+        <div>
+          <span> Our Portfolio </span>
+
+          <h1>Creative Videos That Create Impact</h1>
+
+          <p>
+            Explore our best editing projects created for brands, creators and
+            businesses.
+          </p>
+        </div>
+      </section>
+
+      <!-- FILTER BUTTONS -->
+
+      <section class="portfolio-section">
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+
+          <button class="filter-btn" data-filter="short">Short Form</button>
+
+          <button class="filter-btn" data-filter="long">Long Form</button>
+
+          <button class="filter-btn" data-filter="gaming">Gaming</button>
+
+          <button class="filter-btn" data-filter="football">
+            Football Edits
+          </button>
+
+          <button class="filter-btn" data-filter="ads">Ads</button>
+        </div>
+
+        <!-- VIDEO GRID -->
+
+        <div class="portfolio-grid">
+          <!-- SHORT FORM -->
+
+          <div class="portfolio-card" data-category="short">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets/videos/short-reels.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Short Form Reels</h3>
+
+              <p>Instagram / YouTube Shorts</p>
+            </div>
+          </div>
+
+          <!-- LONG FORM -->
+
+          <div class="portfolio-card" data-category="long">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\long-form.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Long Form Content</h3>
+
+              <p>YouTube Video Editing</p>
+            </div>
+          </div>
+
+          <!-- GAMING -->
+
+          <div class="portfolio-card" data-category="gaming">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\gaming.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Gaming Videos</h3>
+
+              <p>High Energy Gaming Edits</p>
+            </div>
+          </div>
+
+          <!-- FOOTBALL -->
+
+          <div class="portfolio-card" data-category="football">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\football.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Football Edits</h3>
+
+              <p>Sports Highlight Videos</p>
+            </div>
+          </div>
+
+          <!-- ECOMMERCE -->
+
+          <div class="portfolio-card" data-category="ads">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\ecommerce-ad.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>eCommerce Ads</h3>
+
+              <p>Product Marketing Videos</p>
+            </div>
+          </div>
+
+          <!-- DOCUMENTARY -->
+
+          <div class="portfolio-card" data-category="long">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\documentary.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Documentary Style</h3>
+
+              <p>Storytelling Videos</p>
+            </div>
+          </div>
+
+          <!-- COLOR GRADING -->
+
+          <div class="portfolio-card" data-category="ads">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\color-grading.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Color Grading</h3>
+
+              <p>Cinematic Visual Enhancement</p>
+            </div>
+          </div>
+
+          <!-- ANIME -->
+
+          <div class="portfolio-card" data-category="short">
+            <video
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              aria-label="Project preview"
+            >
+              <source src="assets\videos\anime.mp4#t=0.1" type="video/mp4" />
+            </video>
+
+            <div class="portfolio-overlay">
+              <h3>Anime Videos</h3>
+
+              <p>Creative Animation Editing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+
+      <section class="contact-cta">
+        <h2>Want Similar Videos For Your Brand?</h2>
+
+        <p>Let's create something amazing together.</p>
+
+        <a href="contact.html" class="primary-btn"> Start Project </a>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h2>Edit<span>Karo</span></h2>
+          <p>Creative video editing and social media marketing agency.</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="team.html">Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h3>Services</h3>
+          <a href="services.html">Video Editing</a>
+          <a href="services.html">Social Media Content</a>
+          <a href="services.html">Advertisement Videos</a>
+          <a href="services.html">Color Grading</a>
+        </div>
+        <div class="footer-social" data-social-group>
+          <h3>Follow Us</h3>
+          <div>
+            <a href="#" data-social="instagram" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" data-social="youtube" aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" data-social="linkedin" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="#" data-social="facebook" aria-label="Facebook"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© <span data-year>2026</span> Editkaro.in | All Rights Reserved</p>
+      </div>
+    </footer>
+    <script src="js/config.js?v=4" defer></script>
+    <script src="js/script.js?v=4" defer></script>
+    <script src="js/portfolio.js?v=4" defer></script>
+  </body>
+</html>
