@@ -316,31 +316,26 @@ header {
 /* ================= HERO ================= */
 
 .hero {
-  min-height: 100vh;
-
+  height: 75vh;
+  max-height: 600px;
+  width: 92%;
+  max-width: 1400px;
+  margin: 30px auto;
   position: relative;
-
   display: flex;
-
   align-items: center;
-
   overflow: hidden;
 }
-
 .hero-video {
   position: absolute;
-
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
-
   top: 0;
-
   left: 0;
-
   z-index: -2;
+  transform: scale(1.02);
+  will-change: transform;
 }
 
 .hero-overlay {
@@ -835,15 +830,10 @@ header {
 
 .process-card {
   background: rgba(255, 255, 255, 0.05);
-
   padding: 35px;
-
   border-radius: 25px;
-
   border: 1px solid var(--border);
-
   text-align: center;
-
   transition: 0.4s;
 }
 
@@ -935,21 +925,15 @@ header {
 
 .portfolio-card {
   position: relative;
-
   height: 350px;
-
   overflow: hidden;
-
   border-radius: 25px;
-
   border: 1px solid var(--border);
 }
 
 .portfolio-card video {
   width: 100%;
-
   height: 100%;
-
   object-fit: cover;
 }
 
@@ -1001,86 +985,133 @@ header {
 
 /* =====================================================
    PART 3
-   TESTIMONIALS + FAQ + FOOTER + CTA
+   process + FAQ + FOOTER + CTA
 ===================================================== */
 
-/* ================= TESTIMONIALS ================= */
+/* ================= PROCESS SECTION (MATCHING YOUR SITE STYLE) ================= */
 
-.testimonial-container {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 30px;
+.process-section {
+  padding: 100px 6%;
+  position: relative;
+  background: var(--bg);
 }
 
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.05);
-
-  border: 1px solid var(--border);
-
-  padding: 35px;
-
-  border-radius: 25px;
-
+.process-header {
   text-align: center;
-
-  transition: 0.4s;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
 }
 
-.testimonial-card:hover {
-  transform: translateY(-10px);
-
-  background: rgba(139, 92, 246, 0.12);
+.process-tag {
+  display: inline-block;
+  color: var(--primary, #3b82f6);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
-.testimonial-card img {
-  width: 90px;
-
-  height: 90px;
-
-  border-radius: 50%;
-
-  margin: 0 auto 20px;
-
-  object-fit: cover;
-
-  border: 3px solid #8b5cf6;
+.process-title {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--white, #ffffff);
+  line-height: 1.2;
 }
 
-.testimonial-card p {
+.process-title span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.process-subtitle {
+  color: var(--text, #94a3b8);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* 6 Cards in a Single Row (Square Format) */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.process-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 12px;
+  aspect-ratio: 1 / 1; /* Exact Square Cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.process-number {
+  font-size: 22px;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+
+.process-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.process-card p {
   color: var(--text);
-
-  line-height: 1.8;
-
-  margin-bottom: 20px;
-
-  font-style: italic;
+  font-size: 11px;
+  line-height: 1.3;
+  margin: 0;
 }
 
-.testimonial-card h3 {
-  font-size: 20px;
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .process-card {
+    aspect-ratio: auto;
+    min-height: 180px;
+  }
 }
 
-.testimonial-card span {
-  color: #a78bfa;
-
-  font-size: 14px;
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.stars {
-  color: #facc15;
-
-  margin-top: 15px;
-
-  letter-spacing: 5px;
+@media (max-width: 480px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ================= FAQ ================= */
 
 .faq-container {
   max-width: 900px;
-
   margin: auto;
 }
 
